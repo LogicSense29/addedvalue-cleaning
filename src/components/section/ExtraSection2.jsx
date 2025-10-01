@@ -46,7 +46,7 @@ function ExtraSection2() {
     <section className='bg-white py-10 md:py-16 lg:py-[80px] flex flex-col space-y-10'>
       <div className='px-5 md:px-20'>
         <div className='bg-[#faf7f7] space-y-2 h-full flex flex-col justify-center items-center py-10 md:py-16 px-10'>
-          <h2 className='font-raleway text-2xl md:text-4xl text-center font-semibold'>
+          <h2 className='font-raleway text-3xl md:text-4xl text-center font-semibold'>
             Let's leave you speechless and spotless
           </h2>
           <p className='text-lg leading-relaxed text-gray-700 text-center'>

@@ -10,7 +10,7 @@ import React from "react";
 
 function HeroSection3() {
   return (
-    <section className='relative min-h-screen flex flex-col md:flex-row lg:justify-left items-center px-5 md:px-0 bg-[#ffffff] gap-8 bg-[url(./kitchen-no-roof.png)] md:bg-[url(./kitchen-white.png)] bg-no-repeat bg-left md:bg-none'>
+    <section className='relative min-h-screen flex flex-col md:flex-row lg:justify-left items-center px-5 md:px-0 bg-[#ffffff] gap-8 bg-[url("./kitchen-no-roof.png")] md:bg-[url("./kitchen-white.png")] bg-no-repeat bg-left'>
       <div className='w-full md:mx-auto h-screen md:pl-12 lg:pl-20 pt-20 relative z-10 flex flex-col justify-around'>
         <div className='space-y-4'>
           <div className='star flex flex-col md:flex-row gap-2 justify-center items-center md:justify-start'>
