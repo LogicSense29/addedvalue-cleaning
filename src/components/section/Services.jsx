@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
@@ -33,6 +34,7 @@ const services = [
 ];
 
 export default function Services() {
+  const navigate = useNavigate()
 //   const ref = useRef(null);
 //   const { scrollYProgress } = useScroll({
 //     target: ref,
@@ -54,7 +56,7 @@ export default function Services() {
       {/* Sticky viewport */}
       <div className='flex flex-col md:flex-row items-center justify-center gap-10 md:gap-6'>
         {services.map((items, index) => (
-          <div key={index} className='cursor-pointed space-y-6 group'>
+          <div key={index} className='cursor-pointed space-y-6 group' onClick={()=> navigate('/services')}>
             <div className='rounded-md overflow-hidden'>
               <img
                 src={items.clean}
