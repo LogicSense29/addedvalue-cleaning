@@ -37,9 +37,9 @@ function ChoosingUs() {
 //   );
 
   return (
-    <section className='py-10 md:py-16 lg:py-[80px] px-5 md:px-20 space-y-10 bg[]'>
+    <section className='py-10 md:py-16 lg:py-[80px] px-5 md:px-10 lg:px-20 space-y-10 bg[]'>
       <div className=' space-y-2 text-center'>
-        <h2 className='text-4xl font-raleway font-semibold text-gray-900'>
+        <h2 className='text-2xl lg:text-4xl font-raleway font-semibold text-gray-900'>
           Why Choose <br /> AddedValue Services
         </h2>
         <p className='text-lg leading-relaxed text-gray-700'>
@@ -50,7 +50,7 @@ function ChoosingUs() {
       </div>
       <div className='flex flex-col md:flex-row'>
         {benefits.map((items, index) => (
-          <div className='bg-[#FBF7F7] px-10 py-8 md:p-20' key={index}>
+          <div className='bg-[#FBF7F7] px-10 py-8 lg:p-20' key={index}>
             <h3 className='text-xl font-raleway font-semibold text-gray-900'>
               {items.title}
             </h3>
@@ -71,7 +71,6 @@ function ChoosingUs() {
           </motion.div>
         </div>
       </motion.div> */}
-  
     </section>
   );
 }

@@ -81,7 +81,8 @@ function HeroSection3() {
       {/* second side */}
       <div
         className='h-screen hidden md:block w-full md:w-[50%] bg-no-repeat bg-cover bg-center bg-scroll'
-        style={{ backgroundImage: "url('/kitchen-white.png')" }}>
+        style={{ backgroundImage: "url('/kitchen-white.png')" }}
+        >
         {/* <div className=''>
           <img src='/kitchen.jpg' className='oject-cover rounded-sm' />
         </div> */}

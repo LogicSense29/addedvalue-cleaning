@@ -41,7 +41,7 @@ function TrustedCleaning2() {
       ref={ref}
       className='py-10 md:py-16 lg:py-[80px] px-5 md:px-20  bg-[#222222] text-white space-y-10'>
       <div className=' space-y-2 flex flex-col md:flex-row justify-between text-center md:text-left md:items-end gap-10'>
-        <h2 className='text-4xl font-raleway font-semibold  md:w-1/3'>
+        <h2 className='text-2xl md:text-4xl font-raleway font-semibold  md:w-1/3'>
           AddedValue
           <br />
           trusted Since 2019
@@ -54,7 +54,7 @@ function TrustedCleaning2() {
       </div>
       <div className='flex flex-col md:flex-row gap-10 items-center'>
         <div className='md:w-1/3 space-y-4'>
-          <h2 className='font-raleway text-2xl font-semibold'>
+          <h2 className='font-raleway text-xl md:text-2xl font-semibold'>
             We are the best at This.
           </h2>
           <p className='text-lg text-gray-100 mt-2'>

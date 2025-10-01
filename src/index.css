@@ -32,3 +32,9 @@ html {
   font-size: 45px;
  }
 }
+
+@media (min-width: 640px) and (max-width: 691px) {
+ .para {
+  display: block;
+ }
+}

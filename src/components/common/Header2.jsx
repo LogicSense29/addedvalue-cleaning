@@ -31,7 +31,7 @@ function Header2({scrolled}) {
     <>
       <header
         className={`fixed top-0 w-full z-1000 transition-all duration-300 ${
-          scrolled ? "bg-white" : "shadow-none"
+          scrolled || open ? "bg-white" : "shadow-none"
         }`}>
         {/* Invisible spacer div that acts as the "scroll trigger" */}
 
@@ -120,7 +120,7 @@ function Header2({scrolled}) {
             <div className='md:hidden flex items-center'>
               <motion.button
                 whileTap={{ scale: 0.7 }}
-                className='text-header-gray'
+                className='text-black-700'
                 onClick={toggle}>
                 {open ? (
                   <X className='h-6 w-6' />

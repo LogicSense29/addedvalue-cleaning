@@ -40,9 +40,9 @@ export default function Services() {
 //   });
 
   return (
-    <section className='py-10 md:py-16 lg:py-[80px] px-5 md:px-20  relative bg-[#FBF7F7] space-y-10'>
-      <div className=' space-y-2 flex flex-col md:flex-row justify-between text-center md:text-left md:items-end'>
-        <h2 className='text-4xl font-raleway  font-semibold text-gray-900'>
+    <section className='py-10 md:py-16 lg:py-[80px] px-5 md:px-10 lg:px-20 relative bg-[#FBF7F7] space-y-10'>
+      <div className=' space-y-2 flex flex-col md:flex-row justify-between text-center md:text-left md:items-center'>
+        <h2 className='text-2xl lg:text-4xl font-raleway  font-semibold text-gray-900'>
           AddedValue <br /> Cleaning Services
         </h2>
         <p className='text-lg leading-relaxed text-gray-700'>
@@ -66,8 +66,10 @@ export default function Services() {
                 {items.title}
               </h3>
               <div className='flex gap-1 justify-between items-center'>
-                <p className='text-base text-gray-700 flex-[0.9]'>{items.description}</p>
-                <ArrowRight className='self-end' size={16}/>
+                <p className='text-base text-gray-700 flex-[0.9]'>
+                  {items.description}
+                </p>
+                <ArrowRight className='self-end' size={16} />
               </div>
             </div>
           </div>
