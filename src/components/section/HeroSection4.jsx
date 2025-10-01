@@ -10,7 +10,7 @@ import React from "react";
 
 function HeroSection3() {
   return (
-    <section className='relative min-h-screen flex flex-col md:flex-row lg:justify-left items-center px-5 md:px-0 bg-[#ffffff] gap-8 bg-[url(kitchen-white.png)] bg-no-repeat bg-left md:bg-none'>
+    <section className='relative min-h-screen flex flex-col md:flex-row lg:justify-left items-center px-5 md:px-0 bg-[#ffffff] gap-8 bg-[url(./kitchen-no-roof.png)] md:bg-[url(./kitchen-white.png)] bg-no-repeat bg-left md:bg-none'>
       <div className='w-full md:mx-auto h-screen md:pl-12 lg:pl-20 pt-20 relative z-10 flex flex-col justify-around'>
         <div className='space-y-4'>
           <div className='star flex flex-col md:flex-row gap-2 justify-center items-center md:justify-start'>
@@ -33,8 +33,9 @@ function HeroSection3() {
             </h1>
             <p className='font-semibold text-gray-900 md:w-1/2 self-center md:self-start'>
               Professional cleaning services that transform your space into a
-              pristine sanctuary.<br className="para hidden "/> Trusted by thousands of people across the
-              city.
+              pristine sanctuary.
+              <br className='para hidden ' /> Trusted by thousands of people
+              across the city.
             </p>
           </div>
           <div className='mt-4 space-y-4 font-semibold'>
@@ -78,7 +79,7 @@ function HeroSection3() {
         </div>
       </div>
 
-      <div class='block md:hidden absolute inset-0 bg-gradient-to-r from-white/10 via-white/70 to-transparent'></div>
+      <div class='block md:hidden absolute inset-0 bg-gradient-to-r from-white/10 via-white/50 to-transparent'></div>
 
       {/* second side */}
       <div
