@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { motion, useScroll, useTransform } from "motion/react";
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState, useCallback } from 'react'
 const services = [
   {
     title: "Residential Cleaning",
@@ -32,14 +32,39 @@ const services = [
 ];
 
 function ExtraSection2() {
+  const carouselRef = useRef(null);
 
-  // const ref = useRef(null);
+    const innerRef = useRef(null); // draggable content
+    const [maxDrag, setMaxDrag] = useState(0);
 
+    const updateConstraints = useCallback(() => {
+      const outer = carouselRef.current;
+      const inner = innerRef.current;
+      if (!outer || !inner) return;
 
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ["start start", "end end"],
-  // });
+      // get container paddings (px-6 -> padding-left/right)
+      const style = window.getComputedStyle(outer);
+      const paddingLeft = parseFloat(style.paddingLeft) || 0;
+      const paddingRight = parseFloat(style.paddingRight) || 0;
+
+      // visible width inside paddings
+      const visibleWidth = outer.clientWidth - paddingLeft - paddingRight;
+      const contentWidth = inner.scrollWidth;
+
+      const diff = contentWidth - visibleWidth;
+      // negative because framer-motion expects left to be negative when content wider than container
+      setMaxDrag(diff > 0 ? -Math.ceil(diff) : 0);
+    }, []);
+
+    useEffect(() => {
+      updateConstraints();
+      window.addEventListener("resize", updateConstraints);
+      window.addEventListener("load", updateConstraints);
+      return () => {
+        window.removeEventListener("resize", updateConstraints);
+        window.removeEventListener("load", updateConstraints);
+      };
+    }, [updateConstraints]);
 
 
   return (
@@ -50,7 +75,7 @@ function ExtraSection2() {
             Let's leave you speechless and spotless
           </h2>
           <p className='text-lg leading-relaxed text-gray-700 text-center'>
-           Experience cleaning that shines beyond expectations,
+            Experience cleaning that shines beyond expectations,
             <br className='hidden md:block' />
             leaving your space flawless, refreshing, and truly inviting
           </p>
@@ -61,9 +86,15 @@ function ExtraSection2() {
         </div>
       </div>
 
-      <div className='overflow-hidden grid grid-cols-1 w-full pl-5 md:pl-20 '>
+      <motion.div
+        className='overflow-hidden cursor-grab grid grid-cols-1 w-full pl-5 md:pl-20 '
+        ref={carouselRef}>
         <motion.div
           className='flex gap-10'
+          ref={innerRef}
+          drag='x'
+          dragConstraints={{ left: maxDrag, right: 0 }}
+          dragElastic={0.12}
           animate={{
             x: ["0%", "-25%", "-50%", "-75%", "0%"], // step movement
           }}
@@ -75,64 +106,20 @@ function ExtraSection2() {
             repeatDelay: 5, // pause before looping
           }}>
           {[...services, ...services].map((item, i) => (
-            <div
+            <motion.div
               key={i}
               className='w-[100%] md:w-1/2 flex-shrink-0 flex flex-col items-center'>
-              <img
+              <motion.img
                 src={item.clean}
                 alt={item.title}
+                draggable={false}
+                whileTap={{ cursor: "grabbing" }}
                 className=' object-cover rounded-md'
               />
-              {/* <p className='mt-2 font-semibold text-gray-700'>
-                {item.title}
-              </p> */}
-            </div>
+            </motion.div>
           ))}
         </motion.div>
-      </div>
-      {/* <div ref={ref} className='h-[400vh] bg-red-600'>
-        <div className='sticky h-screen top-0'>
-          <div className=''>
-            {services.map((service, i) => {
-              const start = i / services.length;
-              const end = (i + 1) / services.length;
-
-              const clipPath = useTransform(
-                scrollYProgress,
-                [start, end],
-                i === services.length - 1
-                  ? ["inset(0% 100% 0% 0%)", "inset(0% 0% 0% 0%)"] // always fully open
-                  : ["inset(0% 100% 0% 0%)", "inset(0% 0% 0% 0%)"]
-              );
-
-              const opacity = useTransform(
-                scrollYProgress,
-                [start, start + 0.05, end - 0.05, end],
-                i === services.length - 1 ? [0, 1, 1, 1] : [0, 1, 1, 0]
-              );
-
-              return (
-                <motion.div
-                  key={i}
-                  className='absolute inset-0'
-                  style={{ opacity }}>
-                  <img
-                    src={service.dirty}
-                    alt='dirty'
-                    className='absolute inset-0 w-full h-full object-cover'
-                  />
-                  <motion.img
-                    src={service.clean}
-                    alt='clean'
-                    className='absolute inset-0 w-full h-full object-cover'
-                    style={{ clipPath }}
-                  />
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </div> */}
+      </motion.div>
     </section>
   );
 }
