@@ -10,7 +10,7 @@ import React from "react";
 
 function HeroSection3() {
   return (
-    <section className='relative min-h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-0 bg-[#ffffff] gap-8 bg-[url("./kitchen-no-roof.png")] md:bg-[url("./bg-extended.png")] bg-no-repeat bg-cover'>
+    <section className='relative min-h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-0 bg-[#ffffff] gap-8 bg-[url("/kitchen-no-roof.png")] md:bg-[url("/bg-extended.png")] bg-no-repeat bg-cover'>
       <div className='mask-clean w-full md:mx-auto h-screen pt-20 relative z-10 flex flex-col justify-center items-center'>
         <div className='container space-y-4 flex flex-col items-center bg-white/20 backdrop-blur-xs border-b border-white/30 py-12 px-6 md:px-12 w-fit rounded-2xl'>
           <div className='star flex flex-col md:flex-row gap-2 justify-center items-center text-sm'>
@@ -72,7 +72,7 @@ function HeroSection3() {
 
       {/* second side */}
       <div
-        className='absolute h-screen w-full bg-no-repeat bg-cover bg-[url("./kitchen-no-roof.png")] md:bg-[url("./bg-extended.png")] scale-x-[-1]'
+        className='absolute h-screen w-full bg-no-repeat bg-cover bg-[url("/kitchen-no-roof.png")] md:bg-[url("/bg-extended.png")] scale-x-[-1]'
         // style={{ backgroundImage: "url('/bg-extended.png')" }}
       ></div>
       {/* <div class='absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent'></div> */}

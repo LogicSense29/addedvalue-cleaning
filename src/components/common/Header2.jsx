@@ -47,15 +47,15 @@ function Header2({scrolled}) {
               delay: 0.3,
               duration: 1.2,
             }}
-            className='pt-8 z-100'>
-            <img src={Logo} alt='Added Value Logo' className='w-[80px]' />
+            className='z-100'>
+            <img src={Logo} alt='Added Value Logo' className='w-[50px]' />
           </motion.div>
 
           {/* Desktop Navigation */}
           <nav
             className={`md:flex hidden space-x-8 ${
               scrolled
-                ? "text-gray-700 py-2 px-10 rounded-sm"
+                ? "text-gray-800 py-2 px-10 rounded-sm"
                 : "bg-transparent"
             }`}>
             {navlinks.map((item, index) => (
@@ -86,13 +86,13 @@ function Header2({scrolled}) {
                 {item.name === "Services" && (
                   <div className='absolute left-0 top-full hidden group-hover:block bg-[#faf7f7] font-semibold shadow-sm rounded-sm py-4 px-6 w-[200px] z-100'>
                     <ul className='space-y-2'>
-                      <li className='hover:underline transition-colors text-gray-600  cursor-pointer'>
+                      <li className='hover:underline transition-colors text-gray-700  cursor-pointer'>
                         <a href='/commercial'> Commercial</a>
                       </li>
-                      <li className='hover:underline transition-colors text-gray-600  cursor-pointer'>
+                      <li className='hover:underline transition-colors text-gray-700  cursor-pointer'>
                         <a href='/residential'> Residential</a>
                       </li>
-                      <li className='hover:underline transition-colors text-gray-600 cursor-pointer'>
+                      <li className='hover:underline transition-colors text-gray-700 cursor-pointer'>
                         <a href='/deep'> Deep Cleaning</a>
                       </li>
                       <li className='hover:underline transition-colors text-gray-600 cursor-pointer'>
@@ -155,7 +155,23 @@ function Header2({scrolled}) {
                     </a>
                   ))}
                 </nav>
-                <MobileButton text={"Get Quote"} />
+                {/* <MobileButton text={"Get Quote"} /> */}
+                 <motion.button
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        delay: 1.3,
+                        duration: 0.8,
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 15,
+                      }}
+                      className={` ${
+                        small ? "px-5 py-2 text-xs" : "px-6 py-3 text-sm"
+                      } rounded-md bg-gradient-to-r from-primary-2 to-primary 
+                      text-white font-semibold hover:to-primary hover:to-primary-2 transition-all duration-500`}>
+                      {text}
+                    </motion.button>
               </motion.div>
             )}
           </AnimatePresence>
