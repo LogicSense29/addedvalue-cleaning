@@ -16,7 +16,7 @@ function MobileButton({ text, destination, small }) {
       }}
       className={` ${
         small ? "px-5 py-2 text-xs" : "px-6 py-3 text-sm"
-      } rounded-md bg-gradient-to-r from-primary-2 to-primary 
+      } rounded-full bg-gradient-to-r from-primary-2 to-primary 
       text-white font-semibold hover:to-primary hover:to-primary-2 transition-all duration-500 hidden md:inline-block`}>
       {text}
     </motion.button>
