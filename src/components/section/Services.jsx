@@ -43,7 +43,7 @@ export default function Services() {
 
   return (
     <section className='py-10 md:py-16 lg:py-[80px] px-5 sm:px-10 lg:px-20 relative bg-[#FBF7F7] space-y-10'>
-      <div className="">
+      <div className="space-y-10">
         <div className='space-y-2 flex flex-col md:flex-row justify-between text-center md:items-center md:text-left w-full md:gap-2'>
           <h2 className='text-2xl lg:text-4xl font-raleway  font-semibold text-gray-900 self-left'>
             AddedValue <br /> Cleaning Services
