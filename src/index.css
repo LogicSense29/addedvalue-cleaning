@@ -22,7 +22,7 @@ html {
 }
 
 .mask-clean {
-  animation: cleanReveal 2.5s ease-in-out forwards;
+  animation: cleanReveal 2.5s ease-in-out 2s forwards;
   clip-path: circle(0% at 50% 50%);
 }
 
