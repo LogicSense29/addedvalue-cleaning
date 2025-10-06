@@ -149,7 +149,7 @@ function Header2({scrolled}) {
                     <a
                       key={index}
                       href={item.path}
-                      className='font-medium text-header-gray py-2'
+                      className='font-semibold font-gray-800 text-header-gray py-2'
                       onClick={toggle}>
                       {item.name}
                     </a>

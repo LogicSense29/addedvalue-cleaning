@@ -41,7 +41,7 @@ html {
  }
 }
 
-@media (max-width: 1024px) and (max-width: 1041px) {
+@media (min-width: 397px) and (max-width: 1041px) {
  .heading-text {
   font-size: 45px;
  }
