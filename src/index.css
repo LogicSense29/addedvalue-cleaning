@@ -21,6 +21,20 @@ html {
   --color-main-bg: #F2F7F8;
 }
 
+.mask-clean {
+  animation: cleanReveal 2.5s ease-in-out forwards;
+  clip-path: circle(0% at 50% 50%);
+}
+
+@keyframes cleanReveal {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(150% at 50% 50%);
+  }
+}
+
 @media (max-width: 768px) {
  .star {
   justify-content: start;

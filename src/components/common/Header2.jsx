@@ -35,7 +35,7 @@ function Header2({scrolled}) {
         }`}>
         {/* Invisible spacer div that acts as the "scroll trigger" */}
 
-        <div className='container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between h-16 md:h-20'>
+        <div className='mx-auto px-4 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between h-16 md:h-20'>
           {/* logo */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -73,10 +73,8 @@ function Header2({scrolled}) {
                 {/* Parent link */}
                 <a
                   href={item.path}
-                  className={`flex font-lato gap-1 items-center transition-colors duration-300 ${
-                    scrolled
-                      ? "text-gray-900 font-bold"
-                      : "text-gray-900 font-bold"
+                  className={`flex font-raleway font-semibold  items-center transition-colors duration-300 ${
+                    scrolled ? "text-gray-600 " : "text-gray-600"
                   }`}>
                   {item.name}
                   {item.name === "Services" && (
@@ -86,19 +84,19 @@ function Header2({scrolled}) {
 
                 {/* Dropdown menu */}
                 {item.name === "Services" && (
-                  <div className='absolute left-0 top-full hidden group-hover:block bg-[#faf7f7] shadow-sm rounded-sm py-4 px-6 w-[200px] z-100'>
+                  <div className='absolute left-0 top-full hidden group-hover:block bg-[#faf7f7] font-semibold shadow-sm rounded-sm py-4 px-6 w-[200px] z-100'>
                     <ul className='space-y-2'>
-                      <li className='hover:text-primary transition-colors text-gray-900 font-bold cursor-pointer'>
+                      <li className='hover:underline transition-colors text-gray-600  cursor-pointer'>
                         <a href='/commercial'> Commercial</a>
                       </li>
-                      <li className='hover:text-primary transition-colors text-gray-900 font-bold cursor-pointer'>
+                      <li className='hover:underline transition-colors text-gray-600  cursor-pointer'>
                         <a href='/residential'> Residential</a>
                       </li>
-                      <li className='hover:text-primary transition-colors text-gray-900 font-bold cursor-pointer'>
+                      <li className='hover:underline transition-colors text-gray-600 cursor-pointer'>
                         <a href='/deep'> Deep Cleaning</a>
                       </li>
-                      <li className='hover:text-primary transition-colors text-gray-900 font-bold cursor-pointer'>
-                        <a href="/">Airbnb</a>
+                      <li className='hover:underline transition-colors text-gray-600 cursor-pointer'>
+                        <a href='/'>Airbnb</a>
                       </li>
                     </ul>
                   </div>

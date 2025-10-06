@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection3 from '../../components/section/HeroSection4'
+import HeroSection3 from '../../components/section/HeroSection5'
 import TrustedCleaning2 from '../../components/section/TrustedCleaning2'
 import ExtraSection2 from '../../components/section/ExtraSection2'
 import Services from '../../components/section/Services'

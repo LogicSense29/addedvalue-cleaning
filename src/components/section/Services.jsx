@@ -7,7 +7,7 @@ const services = [
   {
     title: "Residential Cleaning",
     description:
-      "Thorough home cleaning that covers living rooms, kitchens, bedrooms, and more, leaving your home fresh, comfortable, inviting and sparkling",
+      "Thorough home cleaning that covers living rooms, kitchens, bedrooms, and more, leaving your home fresh, comfortable, inviting and sparkling.",
     dirty: "/capa-dirty.jpg",
     clean: "/carpet-clean.jpg",
   },
@@ -42,40 +42,57 @@ export default function Services() {
 //   });
 
   return (
-    <section className='py-10 md:py-16 lg:py-[80px] px-5 md:px-10 lg:px-20 relative bg-[#FBF7F7] space-y-10'>
-      <div className=' space-y-2 flex flex-col md:flex-row justify-between text-center md:text-left md:items-center'>
-        <h2 className='text-2xl lg:text-4xl font-raleway  font-semibold text-gray-900'>
-          AddedValue <br /> Cleaning Services
-        </h2>
-        <p className='text-lg leading-relaxed text-gray-700'>
-          From regular maintenance to deep cleaning projects,
-          <br className='hidden md:block' /> we offer comprehensive solutions
-          tailored to your specific needs and schedule.
-        </p>
-      </div>
-      {/* Sticky viewport */}
-      <div className='flex flex-col md:flex-row items-center justify-center gap-10 md:gap-6'>
-        {services.map((items, index) => (
-          <div key={index} className='cursor-pointed space-y-6 group' onClick={()=> navigate('/services')}>
-            <div className='rounded-md overflow-hidden'>
-              <img
-                src={items.clean}
-                className='object-cover rounded-md object-cover transition-transform duration-500 ease-in-out group-hover:scale-110'
-              />
-            </div>
-            <div>
-              <h3 className='font-raleway text-lg font-semibold text-gray-900'>
-                {items.title}
-              </h3>
-              <div className='flex gap-1 justify-between items-center'>
-                <p className='text-base text-gray-700 flex-[0.9]'>
-                  {items.description}
-                </p>
-                <ArrowRight className='self-end' size={16} />
+    <section className='py-10 md:py-16 lg:py-[80px] px-5 sm:px-10 lg:px-20 relative bg-[#FBF7F7] space-y-10'>
+      <div className="">
+        <div className='space-y-2 flex flex-col md:flex-row justify-between text-center md:items-center md:text-left w-full md:gap-2'>
+          <h2 className='text-2xl lg:text-4xl font-raleway  font-semibold text-gray-900 self-left'>
+            AddedValue <br /> Cleaning Services
+          </h2>
+          <p className='text-base md:text-md lg:text-lg leading-relaxed text-gray-700 self-left'>
+            From regular maintenance to deep cleaning projects,
+            <br className='hidden md:block' /> we offer comprehensive solutions
+            tailored to your specific needs and schedule.
+          </p>
+        </div>
+        {/* Sticky viewport */}
+        <div className='flex flex-col md:flex-row items-center justify-center gap-10 md:gap-6'>
+          {services.map((items, index) => (
+            <div
+              key={index}
+              className='cursor-pointed space-y-6 group'
+              onClick={() => navigate("/services")}>
+              <div className='rounded-md overflow-hidden'>
+                <img
+                  src={items.clean}
+                  className='object-cover rounded-md object-cover transition-transform duration-500 ease-in-out group-hover:scale-110'
+                />
+              </div>
+              <div>
+                <h3 className='font-raleway text-lg font-semibold text-gray-900'>
+                  {items.title}
+                </h3>
+                <div className='flex flex-col gap-3 items-start block lg:hidden'>
+                  <p className=' text-gray-700 flex-[0.9]'>
+                    {items.description}
+                  </p>
+                  <a
+                    href='/contact'
+                    className='flex gap-2 items-center text-[#fafafa] bg-primary py-2 px-4 md:px-6 md:py-3 md:text-sm rounded-full'>
+                    Learn more
+                    <ArrowRight size={16} />
+                  </a>
+                </div>
+
+                <div className='flex gap-1 justify-between items-center hidden lg:flex'>
+                  <p className=' text-gray-700 flex-[0.9]'>
+                    {items.description}
+                  </p>
+                  <ArrowRight className='self-end' size={16} />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

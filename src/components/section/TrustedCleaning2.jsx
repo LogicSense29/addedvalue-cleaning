@@ -39,14 +39,14 @@ function TrustedCleaning2() {
   return (
     <section
       ref={ref}
-      className='py-10 md:py-16 lg:py-[80px] px-5 md:px-20  bg-[#222222] text-white space-y-10'>
+      className='py-10 md:py-16 lg:py-[80px] px-5 sm:px-10 lg:px-20 bg-[#222222] text-white space-y-10'>
       <div className=' space-y-2 flex flex-col md:flex-row justify-between text-center md:text-left md:items-end gap-10'>
-        <h2 className='text-2xl md:text-4xl font-raleway font-semibold  md:w-1/3'>
+        <h2 className='text-2xl md:text-3xl lg:text-4xl font-raleway font-semibold  md:w-1/3'>
           AddedValue
           <br />
           trusted Since 2019
         </h2>
-        <p className='text-lg leading-relaxed md:w-2/3 text-center md:text-left'>
+        <p className='text-base md:text-md lg:text-lg leading-relaxed md:w-2/3 text-center md:text-left'>
           AddedValue began with a simple mission: give families back their time
           with spotless homes. From a small start, we’ve grown into the area’s
           most trusted cleaning service.
@@ -57,12 +57,12 @@ function TrustedCleaning2() {
           <h2 className='font-raleway text-xl md:text-2xl font-semibold'>
             We are the best at This.
           </h2>
-          <p className='text-lg text-gray-100 mt-2'>
+          <p className='text-base md:text-md lg:text-lg text-gray-100 mt-2'>
             AddedValue began with a simple mission: give families back their
             time with spotless homes. From a small start, we’ve grown into the
             area’s most trusted cleaning service.
           </p>
-          <button className='flex gap-2 items-center text-primary py-2 px-4 md:px-10 md:py-4 rounded-sm  font-semibold bg-primary text-white self-start'>
+          <button className='flex gap-2 items-center text-primary py-2 px-4 md:px-6 md:py-3 rounded-full font-semibold bg-primary text-white self-start'>
             Learn more
             <ArrowRight size={16} />
           </button>

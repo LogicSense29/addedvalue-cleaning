@@ -11,12 +11,14 @@ import Logo from "/logo-av.png";
 
 function Footer() {
   return (
-    <footer id='contact' className='bg-[#fafafa] text-gray-700 px-8'>
+    <footer
+      id='contact'
+      className='bg-[#fafafa] text-gray-700 mx-auto px-4 sm:px-6 md:px-8 lg:px-10'>
       {/* Top Section */}
-      <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 py-16 border-b border-gray-300'>
+      <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-10 lg:gap-12 py-16 border-b border-gray-300'>
         {/* Brand */}
         <div>
-          <div className='flex gap-2 items-end mb-4'>
+          <div className='flex gap-2 items-center mb-4'>
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -28,13 +30,13 @@ function Footer() {
                 duration: 1.2,
               }}
               className='z-100'>
-              <img src={Logo} alt='Added Value Logo' className='w-[50px]' />
+              <img src={Logo} alt='Added Value Logo' className='w-[30px]' />
             </motion.div>
-            <h3 className='text-2xl font-raleway font-bold text-accent mb-2 text-gray-900'>
+            <h3 className='md::text-2xl font-raleway font-bold text-accent mb-2 text-gray-900'>
               AddedValue
             </h3>
           </div>
-          <p className='text-gray-700 mb-6 max-w-sm'>
+          <p className='text-gray-700 mb-6 max-w-sm font-semibold'>
             Leaving spaces spotless with trusted and professional cleaning.
           </p>
           {/* Social links */}
@@ -62,17 +64,15 @@ function Footer() {
         </div>
 
         {/* Services */}
-        <div>
+        <div className="">
           <h4 className='text-lg font-raleway font-semibold mb-4 text-gray-900'>
             Services
           </h4>
-          <ul className='space-y-2 text-gray-700 text-sm'>
-            <li className='hover:text-primary transition'>
-              Commercial Cleaning
-            </li>
-            <li className='hover:text-primary transition'>Retail Cleaning</li>
-            <li className='hover:text-primary transition'>Deep Cleaning</li>
-            <li className='hover:text-primary transition'>Carpet Cleaning</li>
+          <ul className='space-y-2 text-gray-700 font-semibold text-sm'>
+            <li className='hover:underline transition'>Commercial Cleaning</li>
+            <li className='hover:underline transition'>Retail Cleaning</li>
+            <li className='hover:underline transition'>Deep Cleaning</li>
+            <li className='hover:underline transition'>Carpet Cleaning</li>
           </ul>
         </div>
 
@@ -81,7 +81,7 @@ function Footer() {
           <h4 className='text-lg font-raleway font-semibold mb-4 text-gray-900'>
             Contact
           </h4>
-          <ul className='space-y-3 text-gray-700 text-sm'>
+          <ul className='space-y-2 text-gray-700 font-semibold text-sm'>
             <li className='flex items-center gap-2'>
               <Phone size={16} /> +447979145687
             </li>
@@ -99,16 +99,16 @@ function Footer() {
           <h4 className='text-lg font-raleway font-semibold mb-4 text-gray-900'>
             Stay Updated
           </h4>
-          <p className='text-gray-700 mb-4 text-sm'>
+          <p className='text-gray-700 font-semibold mb-4 text-sm'>
             Subscribe to our newsletter for cleaning tips and special offers.
           </p>
           <div className='flex'>
             <input
               type='email'
               placeholder='Enter your email'
-              className='w-full px-4 py-2 rounded-l-md bg-[#fafafa] text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary'
+              className='w-full px-4 py-2 rounded-l-full bg-[#fafafa] text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary'
             />
-            <button className='px-5 py-2 rounded-r-md bg-primary text-white font-semibold hover:bg-primary/80 transition'>
+            <button className='px-5 py-2 rounded-r-full bg-primary text-white font-semibold hover:bg-primary/80 transition'>
               Subscribe
             </button>
           </div>
@@ -116,9 +116,9 @@ function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className='max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 py-6 text-sm text-gray-700'>
+      <div className='max-w-7xl mx-auto flex flex-col md:flex-row font-semibold justify-between items-center gap-6 py-6 text-sm text-gray-700'>
         <p>© 2025 AddedValue. All rights reserved.</p>
-        <div className='flex gap-6 font-medium'>
+        <div className='flex gap-6'>
           <a href='#' className='hover:text-primary transition'>
             About
           </a>

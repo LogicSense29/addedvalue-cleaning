@@ -6,7 +6,7 @@ const benefits = [
   {
     title: "Eco-Friendly Tools",
     description:
-      "We use safe, sustainable products and equipment that protect your home, family, and the environment.",
+      "We use safe, sustainable products and equipment that protect everyone and the environment.",
   },
   {
     title: "Trained Professionals",
@@ -38,11 +38,11 @@ function ChoosingUs() {
 
   return (
     <section className='py-10 md:py-16 lg:py-[80px] px-5 md:px-10 lg:px-20 space-y-10 bg[]'>
-      <div className=' space-y-2 text-center'>
+      <div className='  text-center'>
         <h2 className='text-2xl lg:text-4xl font-raleway font-semibold text-gray-900'>
           Why Choose <br /> AddedValue Services
         </h2>
-        <p className='text-lg leading-relaxed text-gray-700'>
+        <p className='text-base md:text-md lg:text-lg leading-relaxed text-gray-700'>
           From regular maintenance to deep cleaning projects,
           <br className='hidden md:block' /> we offer comprehensive solutions
           tailored to your specific needs and schedule.
@@ -50,7 +50,7 @@ function ChoosingUs() {
       </div>
       <div className='flex flex-col md:flex-row'>
         {benefits.map((items, index) => (
-          <div className='bg-[#FBF7F7] px-10 py-8 lg:p-20' key={index}>
+          <div className='bg-[#FBF7F7] px-10 py-8 lg:p-20 flex-1' key={index}>
             <h3 className='text-xl font-raleway font-semibold text-gray-900'>
               {items.title}
             </h3>

@@ -6,16 +6,14 @@ import {
   CheckIcon,
   Star,
 } from "lucide-react";
-import React, {useRef, useEffect} from "react";
-
+import React from "react";
 
 function HeroSection3() {
-
   return (
-    <section className='relative min-h-screen flex flex-col md:flex-row lg:justify-left items-center px-5 md:px-0 bg-[#ffffff] gap-8  bg-no-repeat bg-cover'>
-      <div className='container w-full md:mx-auto h-screen md:pl-12 lg:pl-20 pt-20 relative z-10 flex flex-col justify-around '>
-        <div className='space-y-2 lg:w-1/2'>
-          <div className='star flex flex-col md:flex-row gap-2 justify-center items-center md:justify-start'>
+    <section className='relative min-h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-0 bg-[#ffffff] gap-8  bg-no-repeat bg-cover'>
+      <div className=' w-full md:mx-auto h-screen pt-20 relative z-10 flex flex-col justify-center items-center'>
+        <div className='container space-y-4 flex flex-col items-center bg-white/20 backdrop-blur-xs border-b border-white/30 py-12 px-12 w-fit rounded-2xl'>
+          <div className='star flex flex-col md:flex-row gap-2 justify-center items-center text-sm'>
             <div className='flex items-center'>
               <Star fill='#FFD700' className='text-secondary' size={16} />
               <Star fill='#FFD700' className='text-secondary' size={16} />
@@ -23,39 +21,28 @@ function HeroSection3() {
               <Star fill='#FFD700' className='text-secondary' size={16} />
               <Star fill='#FFD700' className='text-secondary' size={16} />
             </div>
-            <span className='text-gray-900 font-medium traking-wide'>
+            <span className='text-gray-600 font-semibold tracking-wider'>
               4.9/5 from 1,000+ customers
             </span>
           </div>
-          <div className='space-y-2 text-center md:text-left flex flex-col'>
-            <h1 className='heading-text leading-none text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-raleway font-medium'>
+          <div className='space-y-2 text-center flex flex-col items-center'>
+            <h1 className='heading-text leading-none text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-raleway font-semibold'>
               Spotless Spaces,
               <br className='hidden sm:block' />{" "}
               <span className='text-primary'>Stress-Free</span> Living
             </h1>
-            <p className='font-medium text-gray-900 max-w-xl self-center md:self-start tracking-wide'>
+            <p className='font-normal text-center text-gray-700 max-w-md tracking-wider'>
               Professional cleaning services that transform your space into a
               pristine sanctuary.
-              <br className='para hidden ' /> Trusted by thousands of people
-              across the city.
+              {/* <br className='para hidden ' /> Trusted by thousands of people
+              across the city. */}
             </p>
           </div>
           <div className='mt-4 space-y-4 font-semibold'>
-            {/* <div className='flex flex-col md:flex-row gap-2 md:gap-4 justify-center md:justify-start items-center'>
-            <div className='flex gap-2 items-center bg-white/10 px-3 py-2 rounded-full text-sm md:text-base text-gray-700'>
-              <CheckCircle className='text-primary' />
-              <span className=''>100% Satisfaction Guarantee</span>
-            </div>
-
-            <div className='flex gap-2 items-center bg-white/10 px-3 py-2 rounded-full text-sm md:text-base text-gray-700'>
-              <CheckCircle className='text-primary' />
-              <span>Eco-Friendly Products</span>
-            </div>
-          </div> */}
             <div className='flex gap-2 md:gap-4 justify-center md:justify-start flex-wrap'>
               <a
                 href='/contact'
-                className='flex gap-2 items-center text-[#fafafa] bg-primary px-10 py-4 md:text-sm rounded-sm'>
+                className='flex gap-2 items-center text-[#fafafa] bg-primary py-2 px-4 md:px-6 md:py-3 md:text-sm rounded-full'>
                 Get Free Quote
                 <ArrowRight size={16} />
               </a>
@@ -66,7 +53,7 @@ function HeroSection3() {
           </div>
         </div>
 
-        <div className='md:hidden'>
+        {/* <div className='md:hidden'>
           <div className='flex flex-col md:flex-row gap-2 md:gap-4 justify-center md:justify-start items-center'>
             <div className='flex gap-2 items-center bg-white/10 px-3 py-2 rounded-full font-semibold text-gray-900'>
               <CheckCircle className='text-primary' size={16} />
@@ -78,17 +65,14 @@ function HeroSection3() {
               <span>Eco-Friendly Products</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      
 
-      <div
-        class='block absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent backdrop-blur-[1px] z-[5]'
-  ></div>
+      <div class='block absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent backdrop-blur-[0px] z-[5]'></div>
 
       {/* second side */}
       <div
-        className='absolute h-screen hidden md:block w-full bg-no-repeat bg-cover bg-[url("./kitchen-no-roof.png")] md:bg-[url("./bg-extended.png")] scale-x-[-1]'
+        className='absolute h-screen w-full bg-no-repeat bg-cover bg-[url("./kitchen-no-roof.png")] md:bg-[url("./bg-extended.png")] scale-x-[-1]'
         // style={{ backgroundImage: "url('/bg-extended.png')" }}
       ></div>
       {/* <div class='absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent'></div> */}
@@ -96,12 +80,9 @@ function HeroSection3() {
   );
 }
 
-
-
 export default HeroSection3;
 
 // bg-[url("./kitchen-no-roof.png")] md:bg-[url("./big-white.png")]
-// bg-gradient-to-r from-white/70 via-white/10 to-transparent
 
 // an image of a neat home sitting room with natural colors and #FF0000
 // create an image of a neat home sitting room that has very scanty furniture's, and cleaning material placed gently in a visible place with natural colors and #FF0000
