@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 const services = [
   {
@@ -42,6 +42,7 @@ const services = [
 
 export default function Services() {
   const navigate = useNavigate()
+   const setModal = useOutletContext();
 //   const ref = useRef(null);
 //   const { scrollYProgress } = useScroll({
 //     target: ref,
@@ -62,11 +63,11 @@ export default function Services() {
           </p>
         </div>
         {/* Sticky viewport */}
-        <div className='flex grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-10 md:gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-10 md:gap-6 items-stretch'>
           {services.map((items, index) => (
             <div
               key={index}
-              className='cursor-pointed space-y-6 group'
+              className='cursor-pointed space-y-6 group h-full'
               onClick={() => navigate("/services")}>
               <div className='rounded-md overflow-hidden'>
                 <img
@@ -82,15 +83,19 @@ export default function Services() {
                   <p className=' text-gray-700 flex-[0.9]'>
                     {items.description}
                   </p>
-                  <a
-                    href='/contact'
-                    className='flex gap-2 items-center text-[#fafafa] bg-primary py-2 px-4 md:px-6 md:py-3 md:text-sm rounded-full'>
+                  <button
+                    // href={items}
+                    className='flex gap-2 items-center text-[#fafafa] bg-primary py-2 px-4 md:px-6 md:py-3 md:text-sm rounded-full'
+                    onClick={() => setModal(true)}>
                     Learn more
                     <ArrowRight size={16} />
-                  </a>
+                  </button>
                 </div>
 
-                <div className='flex gap-1 justify-between items-center hidden lg:flex'>
+                <div
+                  className='flex gap-1 justify-between items-center hidden lg:flex'
+                  onClick={() => setModal(true)}
+                  >
                   <p className=' text-gray-700 flex-[0.9]'>
                     {items.description}
                   </p>
