@@ -5,7 +5,7 @@ import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 function ContactUs() {
   return (
     <div>
-      <section className='relative min-h-screen flex flex-col md:flex-row justify-center items-center pt-10 px-5 md:px-20 bg-[#fafafa] gap-6'>
+      {/* <section className='relative min-h-screen flex flex-col md:flex-row justify-center items-center pt-10 px-5 md:px-20 bg-[#fafafa] gap-6'>
         <div>
           <h1 className='text-4xl md:text-6xl font-raleway font-semibold'>
             Contact Us
@@ -19,7 +19,26 @@ function ContactUs() {
         <div>
           <img src='/office-cleanup.jpg' className='rounded-sm' />
         </div>
+      </section> */}
+
+      <section className='container pt-6 sm:pt-10 md:pt-20 px-5 md:px-0 relative min-h-[50vh] flex flex-col justify-center items-center bg-[url("/office-cleanup.jpg")] bg-no-repeat bg-cover bg-center'>
+        {/* Overlay */}
+        <div className='absolute inset-0 bg-white/80 backdrop-blur-[2px]'></div>
+
+        <div className='flex flex-col items-center relative z-10 text-center max-w-3xl space-y-4 py-10'>
+          {/* <span className='text-gray-600 tracking-wider bg-red-100  px-3 py-1 text-sm font-bold text-red-700 rounded-full'>
+            About AddedValue
+          </span> */}
+          <h1 className='heading-text leading-none text-[37px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-raleway font-semibold text-gray-900'>
+            Contact <span className='text-primary'>AddedValue Cleaning</span>
+          </h1>
+          <p className='font-normal text-center text-gray-700 max-w-md tracking-wider'>
+            We create clean, healthy, and stress-free spaces with eco-friendly
+            boosts productivity. care and unmatched excellence.
+          </p>
+        </div>
       </section>
+
       {/* Main contact section */}
       <div id='contact' className='py-20'>
         <div className='container mx-auto px-6 lg:px-8'>

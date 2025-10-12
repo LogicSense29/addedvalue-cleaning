@@ -1,63 +1,38 @@
 import React from 'react'
 import ExtraSection2 from '../../components/section/ExtraSection2';
-import { useOutletContext } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    title: "Deep Cleaning",
+    title: "Residential Cleaning",
     description:
-      "Comprehensive cleaning that targets every surface, corner, and fixture — removing hidden dirt, grime, and buildup for a refreshed and spotless home.",
+      "Thorough home cleaning that covers living rooms, kitchens, bedrooms, and more, leaving your home fresh, comfortable, inviting and sparkling.",
     dirty: "/capa-dirty.jpg",
-    clean: "/residential-deep.jpeg",
+    clean: "/carpet-clean.jpg",
   },
   {
-    title: "Regular Cleaning",
+    title: "Commercial Cleaning",
     description:
-      "Consistent scheduled cleaning that maintains a neat, hygienic, and inviting environment — keeping every space fresh, comfortable, and well-organized.",
-    dirty: "/capa-dirty.jpg",
-    clean: "/regular-cleaning.jpeg",
-  },
-  {
-    title: "End of Tenancy",
-    description:
-      "Intensive move-in and move-out cleaning that restores every area to pristine condition — ensuring your space meets professional and landlord standards.",
+      "Professional cleaning for offices, retail, and business spaces — inside and out — creating a spotless, welcoming environment that boosts productivity.",
     dirty: "/office-dirty.jpg",
-    clean: "/end-og-ten.jpeg",
+    clean: "/office-cleanup.jpg",
   },
   {
-    title: "Oven Cleaning",
+    title: "Special Cleaning",
     description:
-      "Detailed appliance care that removes grease, stains, and odor buildup — restoring your oven to a spotless, hygienic, and freshly polished condition.",
+      "A detailed top-to-bottom clean that tackles hidden dirt, grime, and buildup in hard-to-reach areas for a true refreshed and neat environment",
     dirty: "/deep-dirty.jpg",
-    clean: "/oven.jpeg",
+    clean: "/deep-cleaning.jpg",
   },
   {
-    title: "Carpet Cleaning",
+    title: "Airbnb Cleaning",
     description:
-      "Deep fiber cleaning that lifts stains, odors, and embedded dirt — reviving texture, color, and comfort while leaving your carpets fresh and renewed.",
-    dirty: "/deep-dirty.jpg",
-    clean: "/carpet-clean.jpg",
-  },
-  {
-    title: "House Cleaning",
-    description:
-      "Complete top-to-bottom cleaning of every room — from bedrooms to kitchens — ensuring your home stays organized, hygienic, and beautifully welcoming.",
-    dirty: "/capa-dirty.jpg",
-    clean: "/carpet-clean.jpg",
+      "A detailed top-to-bottom clean that covers every surface, corner, and space to keep your environment consistently fresh and welcoming",
+    dirty: "/carpet-messy.png",
+    clean: "/airbnb.jpeg",
   },
 ];
 
-  //   {
-  //     title: "Carpet Cleaning",
-  //     description: "Restore carpets with deep stain & odor removal.",
-  //     dirty: "/carpet-messy.png",
-  //     clean: "/carpet-clean.jpg",
-  //   },
-
-
-function ResidentialCleaning() {
-   const setModal = useOutletContext()
+function Services() {
   return (
     <div>
       {/* <section className='relative min-h-screen flex flex-col md:flex-row justify-center items-center pt-10 px-5 md:px-20 bg-[#fafafa] gap-6'>
@@ -86,12 +61,12 @@ function ResidentialCleaning() {
           </span> */}
           <h1 className='heading-text leading-none text-[37px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-raleway font-semibold text-gray-900'>
             {/* Commercial Services <span className='text-primary'>AddedValue Cleaning</span> */}
-            Residential Services
+            Services
           </h1>
           <p className='font-normal text-center text-gray-700 max-w-md tracking-wider'>
-            Professional cleaning for apartments, duplexes, and family homes —
-            leaving every room spotless, cozy, and refreshed for a truly
-            comfortable living experience.
+            Professional cleaning for offices, retail, and business spaces —
+            inside and out — creating a spotless, welcoming environment that
+            boosts productivity.
           </p>
         </div>
       </section>
@@ -108,9 +83,9 @@ function ResidentialCleaning() {
           </p>
         </div> */}
         {/* Sticky viewport */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-10 md:gap-6 items-stretch'>
+        <div className='grid grid-cols-3 items-center justify-center gap-10 md:gap-6'>
           {services.map((items, index) => (
-            <div key={index} className='cursor-pointed space-y-6 group h-full'>
+            <div key={index} className='cursor-pointed space-y-6 group'>
               <div className='rounded-md overflow-hidden'>
                 <img
                   src={items.clean}
@@ -121,26 +96,9 @@ function ResidentialCleaning() {
                 <h3 className='font-raleway text-lg font-semibold text-gray-900'>
                   {items.title}
                 </h3>
-                <div className='flex flex-col gap-3 items-start block lg:hidden'>
-                  <p className=' text-gray-700 flex-[0.9]'>
-                    {items.description}
-                  </p>
-                  <button
-                    // href={items}
-                    className='flex gap-2 items-center text-[#fafafa] bg-primary py-2 px-4 md:px-6 md:py-3 md:text-sm rounded-full'
-                    onClick={() => setModal(true)}>
-                    Learn more
-                    <ArrowRight size={16} />
-                  </button>
-                </div>
-
-                <div
-                  className='flex gap-1 justify-between items-center hidden lg:flex'
-                  onClick={() => setModal(true)}>
-                  <p className=' text-gray-700 flex-[0.9]'>
-                    {items.description}
-                  </p>
-                  <ArrowRight className='self-end' size={16} />
+                <div className='flex'>
+                  <p className='text-base text-gray-700'>{items.description}</p>
+                  {/* <ArrowRight className='self-end' /> */}
                 </div>
               </div>
             </div>
@@ -148,9 +106,9 @@ function ResidentialCleaning() {
         </div>
       </section>
 
-      <ExtraSection2 />
+      <ExtraSection2/>
     </div>
   );
 }
 
-export default ResidentialCleaning
+export default Services;

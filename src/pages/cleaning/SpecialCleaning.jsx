@@ -1,70 +1,65 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ExtraSection2 from '../../components/section/ExtraSection2';
-import { ArrowRight } from 'lucide-react';
 import { useOutletContext } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    title: "Restroom Sanitation",
+    title: "Carpet Cleaning",
     description:
-      "Expert restroom cleaning and disinfection service ensuring spotless floors, mirrors, and fixtures — eliminating germs, odors, and buildup to maintain a hygienic, fresh, and welcoming environment.",
+      "Deep fiber treatment that removes stains, odors, and dust buildup — restoring your carpets to a clean, soft, and beautifully refreshed condition every time.",
     dirty: "/capa-dirty.jpg",
-    clean: "/restroom-commercial.jpeg",
-    href: ''
+    clean: "/carpet-clean.jpg",
   },
   {
-    title: "Waste Removal",
+    title: "Window Cleaning",
     description:
-      "Reliable waste management and disposal service that removes clutter, debris, and refuse quickly — keeping homes, offices, and outdoor areas clean, organized, and environmentally safe daily.",
+      "Crystal-clear cleaning for windows, glass, and frames — removing dirt, streaks, and smudges to let in more natural light and elevate your space’s appeal.",
     dirty: "/capa-dirty.jpg",
-    clean: "/waste-removal.jpeg",
-    href: ''
+    clean: "/carpet-clean.jpg",
   },
   {
-    title: "Retail Spaces Cleaning",
+    title: "Post Construction Cleaning",
     description:
-      "Professional cleaning for shops, malls, and showrooms — maintaining shiny floors, spotless surfaces, and dust-free displays to create a pristine, inviting, and customer-friendly business space.",
+      "Thorough after-build cleaning that clears dust, debris, and residue — leaving your newly finished property spotless, safe, and ready for immediate use.",
     dirty: "/office-dirty.jpg",
-    clean: "/rental-space.jpeg",
-    href: ''
-  },
-  {
-    title: "Warehouses",
-    description:
-      "Comprehensive cleaning for warehouses and industrial sites — removing dirt, dust, and buildup from floors, shelves, and equipment for a safe, organized, and efficient workspace.",
-    dirty: "/deep-dirty.jpg",
-    clean: "/warehouse.jpeg",
-    href: ''
-  },
-  {
-    title: "School Cleaning",
-    description:
-      "Dedicated school cleaning that covers classrooms, hallways, and restrooms — ensuring safe, sanitized, and tidy learning spaces that promote comfort, focus, and overall student well-being.",
-    dirty: "/deep-dirty.jpg",
-    clean: "/school-cleaning.jpeg",
-    href: ''
-  },
-  {
-    title: "Office Cleaning",
-    description:
-      "Routine and detailed office cleaning that refreshes desks, floors, and shared areas — enhancing hygiene, appearance, and employee productivity in a spotless professional workspace daily.",
-    dirty: "/capa-dirty.jpg",
-    clean: "/office-cleaning.jpeg",
-    href: ''
+    clean: "/office-cleanup.jpg",
   },
 ];
 
+  // {
+  //   title: "Warehouses",
+  //   description:
+  //     "A detailed top-to-bottom clean that tackles hidden dirt, grime, and buildup in hard-to-reach areas for a true refreshed and neat environment",
+  //   dirty: "/deep-dirty.jpg",
+  //   clean: "/deep-cleaning.jpg",
+  // },
+  // {
+  //   title: "School Cleaning",
+  //   description:
+  //     "A detailed top-to-bottom clean that tackles hidden dirt, grime, and buildup in hard-to-reach areas for a true refreshed and neat environment",
+  //   dirty: "/deep-dirty.jpg",
+  //   clean: "/deep-cleaning.jpg",
+  // },
+  // {
+  //   title: "Office Cleaning",
+  //   description:
+  //     "Thorough home cleaning that covers living rooms, kitchens, bedrooms, and more, leaving your home fresh, comfortable, and inviting",
+  //   dirty: "/capa-dirty.jpg",
+  //   clean: "/carpet-clean.jpg",
+  // },
+  //   {
+  //     title: "Carpet Cleaning",
+  //     description: "Restore carpets with deep stain & odor removal.",
+  //     dirty: "/carpet-messy.png",
+  //     clean: "/carpet-clean.jpg",
+  //   },
 
 
-function CommercialCleaning() {
-  const setModal = useOutletContext()
-
-const handleServices = () => {
-  setModal(true);
-}
-
+function SpecialCleaning() {
+   const setModal = useOutletContext();
   return (
-    <div className='relative'>
+    <div>
       {/* <section className='relative min-h-screen flex flex-col md:flex-row justify-center items-center pt-10 px-5 md:px-20 bg-[#fafafa] gap-6'>
         <div>
           <h1 className='text-4xl md:text-6xl font-raleway font-semibold'>
@@ -81,7 +76,7 @@ const handleServices = () => {
         </div>
       </section> */}
 
-      <section className='pt-6 sm:pt-10 md:pt-20 px-5 md:px-0 relative min-h-[50vh] flex flex-col justify-center items-center bg-[url("/office-cleanup.jpg")] bg-no-repeat bg-cover bg-center'>
+      <section className=' pt-6 sm:pt-10 md:pt-20 px-5 md:px-0 relative min-h-[50vh] flex flex-col justify-center items-center bg-[url("/deep-cleaning.jpg")] bg-no-repeat bg-cover bg-center'>
         {/* Overlay */}
         <div className='absolute inset-0 bg-white/80 backdrop-blur-[2px]'></div>
 
@@ -91,12 +86,12 @@ const handleServices = () => {
           </span> */}
           <h1 className='heading-text leading-none text-[37px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-raleway font-semibold text-gray-900'>
             {/* Commercial Services <span className='text-primary'>AddedValue Cleaning</span> */}
-            Commercial Services
+            Special Services
           </h1>
           <p className='font-normal text-center text-gray-700 max-w-md tracking-wider'>
-            Professional cleaning for offices, retail, and business spaces —
-            inside and out — creating a spotless, welcoming environment that
-            boosts productivity.
+            Intensive cleaning designed for post-renovation, events, or unique
+            needs — ensuring every corner is restored to perfection and ready
+            for immediate use.
           </p>
         </div>
       </section>
@@ -115,9 +110,7 @@ const handleServices = () => {
         {/* Sticky viewport */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-10 md:gap-6 items-stretch'>
           {services.map((items, index) => (
-            <div
-              key={index}
-              className='flex flex-col cursor-pointed space-y-6 group h-full'>
+            <div key={index} className='cursor-pointed space-y-6 group h-full'>
               <div className='rounded-md overflow-hidden'>
                 <img
                   src={items.clean}
@@ -143,8 +136,7 @@ const handleServices = () => {
 
                 <div
                   className='flex gap-1 justify-between items-center hidden lg:flex'
-                  onClick={() => setModal(true)}
-                  >
+                  onClick={() => setModal(true)}>
                   <p className=' text-gray-700 flex-[0.9]'>
                     {items.description}
                   </p>
@@ -161,4 +153,4 @@ const handleServices = () => {
   );
 }
 
-export default CommercialCleaning
+export default SpecialCleaning

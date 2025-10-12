@@ -7,8 +7,11 @@ import {
   Star,
 } from "lucide-react";
 import React from "react";
+import { useOutletContext } from "react-router-dom";
 
 function HeroSection3() {
+  const setModal = useOutletContext()
+  
   return (
     <section className='relative min-h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-0 bg-[#ffffff] gap-8 bg-[url("/kitchen-no-roof.png")] md:bg-[url("/bg-extended.png")] bg-no-repeat bg-cover'>
       <div className='mask-clean w-full md:mx-auto h-screen pt-6 sm:pt-10 md:pt-20 relative z-10 flex flex-col justify-center items-center'>
@@ -40,12 +43,13 @@ function HeroSection3() {
           </div>
           <div className='mt-4 space-y-4 font-semibold'>
             <div className='flex gap-2 md:gap-4 justify-center md:justify-start flex-wrap'>
-              <a
-                href='/contact'
+              <button
+                // href='/contact'
+                onClick={()=> setModal(true)}
                 className='flex gap-2 items-center text-[#fafafa] bg-primary py-2 px-4 md:px-6 md:py-3 md:text-sm rounded-full'>
                 Get Free Quote
                 <ArrowRight size={16} />
-              </a>
+              </button>
               {/* <button className='flex gap-2 items-center bg-white p-2 md:px-10 md:py-4 text-sm rounded-sm text-black'>
               View Our Services
             </button> */}

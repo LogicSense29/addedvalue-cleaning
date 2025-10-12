@@ -14,11 +14,11 @@ const card = [
     count: "8",
     description: "Years Experience",
   },
-  //   {
-  //     icon: User,
-  //     count: "95%",
-  //     description: "5-Star Reviews",
-  //   },
+    // {
+    //   icon: User,
+    //   count: "95%",
+    //   description: "5-Star Reviews",
+    // },
   {
     icon: ThumbsUp,
     count: "99",
@@ -102,7 +102,7 @@ function TrustedCleaning2() {
 export default TrustedCleaning2;
 
 
-function Counter({ target, progress, index }) {
+export function Counter({ target, progress, index }) {
   const raw = useTransform(progress, [0, 0.5], [0, target]);
   const smooth = useSpring(raw, { stiffness: 100, damping: 20 });
 

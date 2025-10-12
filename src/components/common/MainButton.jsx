@@ -1,10 +1,12 @@
 import React from 'react'
 import {motion} from 'motion/react'
-import { Link } from 'react-router-dom'
+import { Link, useOutletContext } from 'react-router-dom'
 
-function MainButton({text, destination, small}) {
+function MainButton({text, destination, small, setModal}) {
+
   return (
     <motion.button
+    onClick={()=> setModal(true)}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{

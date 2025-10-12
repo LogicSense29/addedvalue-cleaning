@@ -14,23 +14,30 @@ const services = [
   {
     title: "Commercial Cleaning",
     description:
-      "Professional cleaning for offices, retail, and business spaces — inside and out — creating a spotless, welcoming environment that boosts productivity.",
+      "“Professional cleaning for offices, retail, and business spaces — creating spotless, welcoming environments that boost productivity",
     dirty: "/office-dirty.jpg",
     clean: "/office-cleanup.jpg",
   },
   {
-    title: "Deep Cleaning",
+    title: "Special Cleaning",
     description:
       "A detailed top-to-bottom clean that tackles hidden dirt, grime, and buildup in hard-to-reach areas for a true refreshed and neat environment",
     dirty: "/deep-dirty.jpg",
     clean: "/deep-cleaning.jpg",
   },
-  //   {
-  //     title: "Carpet Cleaning",
-  //     description: "Restore carpets with deep stain & odor removal.",
-  //     dirty: "/carpet-messy.png",
-  //     clean: "/carpet-clean.jpg",
-  //   },
+  {
+    title: "Airbnb Cleaning",
+    description:
+      "A detailed top-to-bottom clean that covers every surface, corner, and space to keep your environment consistently fresh and welcoming",
+    dirty: "/carpet-messy.png",
+    clean: "/airbnb.jpeg",
+  },
+  // {
+  //   title: "Carpet Cleaning",
+  //   description: "Restore carpets with deep stain & odor removal.",
+  //   dirty: "/carpet-messy.png",
+  //   clean: "/carpet-clean.jpg",
+  // },
 ];
 
 export default function Services() {
@@ -43,7 +50,7 @@ export default function Services() {
 
   return (
     <section className='py-10 md:py-16 lg:py-[80px] px-5 sm:px-10 lg:px-20 relative bg-[#FBF7F7] space-y-10'>
-      <div className="space-y-10">
+      <div className='space-y-10'>
         <div className='space-y-2 flex flex-col md:flex-row justify-between text-center md:items-center md:text-left w-full md:gap-2'>
           <h2 className='text-2xl lg:text-4xl font-raleway  font-semibold text-gray-900 self-left'>
             AddedValue <br /> Cleaning Services
@@ -55,7 +62,7 @@ export default function Services() {
           </p>
         </div>
         {/* Sticky viewport */}
-        <div className='flex flex-col md:flex-row items-center justify-center gap-10 md:gap-6'>
+        <div className='flex grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-10 md:gap-6'>
           {services.map((items, index) => (
             <div
               key={index}

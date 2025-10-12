@@ -70,8 +70,8 @@ function ExtraSection2() {
   return (
     <section className='bg-white py-10 md:py-16 lg:py-[80px] flex flex-col space-y-10'>
       <div className='px-5 sm:px-10 lg:px-20'>
-        <div className='bg-[#faf7f7] h-[50vh] flex flex-col justify-center items-center py-10 md:py-16 px-10'>
-          <h2 className='font-raleway text-3xl md:text-4xl text-center font-semibold'>
+        <div className='bg-[#faf7f7] h-[50vh] flex flex-col justify-center items-center py-10 md:py-16 px-10 space-y-4'>
+          <h2 className='font-raleway text-3xl md:text-4xl text-center font-semibold leading-none'>
             Let's leave you speechless and spotless
           </h2>
           <p className='text-lg leading-relaxed text-gray-700 text-center'>
@@ -79,7 +79,7 @@ function ExtraSection2() {
             <br className='hidden md:block' />
             leaving your space flawless, refreshing, and truly inviting
           </p>
-          <button className='flex gap-2 items-center text-primary py-2 px-4 md:px-6 md:py-3 rounded-full  font-semibold bg-primary text-white mt-4'>
+          <button className='flex gap-2 items-center text-primary py-2 px-4 md:px-6 md:py-3 rounded-full  font-semibold bg-primary text-white'>
             Get started
             <ArrowRight size={16} />
           </button>

@@ -22,7 +22,7 @@ const navlinks = [
     path: "/contact-us",
   },
 ];
-function Header2({scrolled}) {
+function Header2({scrolled, setModal}) {
     const [open, setOpen] = useState(false)
 
 
@@ -87,16 +87,16 @@ function Header2({scrolled}) {
                   <div className='absolute left-0 top-full hidden group-hover:block bg-[#faf7f7] font-semibold shadow-sm rounded-sm py-4 px-6 w-[200px] z-100'>
                     <ul className='space-y-2'>
                       <li className='hover:underline transition-colors text-gray-700  cursor-pointer'>
-                        <a href='/commercial'> Commercial</a>
+                        <a href='/commercial'> Commercial Cleaning</a>
                       </li>
                       <li className='hover:underline transition-colors text-gray-700  cursor-pointer'>
-                        <a href='/residential'> Residential</a>
+                        <a href='/residential'> Residential Cleaning</a>
                       </li>
                       <li className='hover:underline transition-colors text-gray-700 cursor-pointer'>
-                        <a href='/deep'> Deep Cleaning</a>
+                        <a href='/special'> Special Cleaning</a>
                       </li>
                       <li className='hover:underline transition-colors text-gray-600 cursor-pointer'>
-                        <a href='/'>Airbnb</a>
+                        <a href='/airbnb'>Airbnb Cleaning</a>
                       </li>
                     </ul>
                   </div>
@@ -130,7 +130,7 @@ function Header2({scrolled}) {
 
             {/* Reach Out */}
             {/* <MainButton text={"Reach out"} /> */}
-            <MobileButton text={"Get Quote"} />
+            <MobileButton text={"Get Quote"} setModal={setModal}/>
           </div>
         </div>
 
@@ -156,6 +156,7 @@ function Header2({scrolled}) {
                   ))}
 
                   <button
+                  onClick={()=> setModal(true)}
                     className={`px-10 py-3 text-sm rounded-full bg-gradient-to-r from-primary-2 to-primary text-white font-semibold hover:to-primary hover:to-primary-2 transition-all duration-500`}>
                     Get Qoute
                   </button>
