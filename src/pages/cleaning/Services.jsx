@@ -6,13 +6,15 @@ const services = [
     title: "Residential Cleaning",
     description:
       "Thorough home cleaning that covers living rooms, kitchens, bedrooms, and more, leaving your home fresh, comfortable, inviting and sparkling.",
+    href: "/residential",
     dirty: "/capa-dirty.jpg",
     clean: "/carpet-clean.jpg",
   },
   {
     title: "Commercial Cleaning",
     description:
-      "Professional cleaning for offices, retail, and business spaces — inside and out — creating a spotless, welcoming environment that boosts productivity.",
+      "“Professional cleaning for offices, retail, and business spaces — creating spotless, welcoming environments that boost productivity",
+    href: "/commercial",
     dirty: "/office-dirty.jpg",
     clean: "/office-cleanup.jpg",
   },
@@ -20,6 +22,7 @@ const services = [
     title: "Special Cleaning",
     description:
       "A detailed top-to-bottom clean that tackles hidden dirt, grime, and buildup in hard-to-reach areas for a true refreshed and neat environment",
+    href: "/special",
     dirty: "/deep-dirty.jpg",
     clean: "/deep-cleaning.jpg",
   },
@@ -27,6 +30,7 @@ const services = [
     title: "Airbnb Cleaning",
     description:
       "A detailed top-to-bottom clean that covers every surface, corner, and space to keep your environment consistently fresh and welcoming",
+    href: "/airbnb",
     dirty: "/carpet-messy.png",
     clean: "/airbnb.jpeg",
   },
@@ -96,9 +100,28 @@ function Services() {
                 <h3 className='font-raleway text-lg font-semibold text-gray-900'>
                   {items.title}
                 </h3>
-                <div className='flex'>
-                  <p className='text-base text-gray-700'>{items.description}</p>
-                  {/* <ArrowRight className='self-end' /> */}
+                <div className='flex flex-col gap-3 items-start block lg:hidden'>
+                  <p className=' text-gray-700 flex-[0.9]'>
+                    {items.description}
+                  </p>
+                  <a
+                    href={items.href}
+                    className='flex gap-2 items-center text-[#fafafa] bg-primary py-2 px-4 md:px-6 md:py-3 md:text-sm rounded-full'
+                    // onClick={() => setModal(true)}
+                  >
+                    Learn more
+                    <ArrowRight size={16} />
+                  </a>
+                </div>
+
+                <div
+                  className='flex gap-1 justify-between items-center hidden lg:flex'
+                  // onClick={() => setModal(true)}
+                >
+                  <p className=' text-gray-700 flex-[0.9]'>
+                    {items.description}
+                  </p>
+                  <ArrowRight className='self-end' size={16} />
                 </div>
               </div>
             </div>
@@ -106,7 +129,7 @@ function Services() {
         </div>
       </section>
 
-      <ExtraSection2/>
+      <ExtraSection2 />
     </div>
   );
 }

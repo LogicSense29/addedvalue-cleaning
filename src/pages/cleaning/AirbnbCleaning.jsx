@@ -136,7 +136,7 @@ function AirbnbCleaning() {
                     // href={items}
                     className='flex gap-2 items-center text-[#fafafa] bg-primary py-2 px-4 md:px-6 md:py-3 md:text-sm rounded-full'
                     onClick={() => setModal(true)}>
-                    Learn more
+                    Get Quote
                     <ArrowRight size={16} />
                   </button>
                 </div>
