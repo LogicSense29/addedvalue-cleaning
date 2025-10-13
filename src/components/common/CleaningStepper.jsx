@@ -48,7 +48,7 @@ export default function CleaningStepper({setModal}) {
       setLoading(true);
       setError(null);
 
-      const res = await fetch("https://your-api-endpoint.com/quote", {
+      const res = await fetch("https://addedvalue-b-production.up.railway.app/api/quotation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
