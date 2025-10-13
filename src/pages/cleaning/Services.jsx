@@ -88,9 +88,9 @@ function Services() {
           </p>
         </div> */}
         {/* Sticky viewport */}
-        <div className='grid grid-cols-3 items-center justify-center gap-10 md:gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-10 md:gap-6 items-stretch'>
           {services.map((items, index) => (
-            <div key={index} className='cursor-pointed space-y-6 group'>
+            <div key={index} className='cursor-pointed space-y-6 group h-full'>
               <div className='rounded-md overflow-hidden'>
                 <img
                   src={items.clean}
